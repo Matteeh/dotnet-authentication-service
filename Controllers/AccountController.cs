@@ -32,18 +32,21 @@ namespace identity.Controllers
         private readonly ITokenBuilder _tokenBuilder;
         private readonly IUnitOfWork _unitOfWork;
 
-        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, ITokenBuilder tokenBuilder, IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+
+        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, ITokenBuilder tokenBuilder, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _signInManager = signInManager;
             _userManager = userManager;
             _tokenBuilder = tokenBuilder;
+            _mapper = mapper;
         }
 
         [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp([FromBody] UserSignUpVM user)
         {
-            ApplicationUser appUser = Mapper.Map<UserSignUpVM, ApplicationUser>(user);
+            ApplicationUser appUser = _mapper.Map<UserSignUpVM, ApplicationUser>(user);
             appUser.UserName = user.Email;
             IdentityResult result = await _userManager.CreateAsync(appUser, user.Password);
             if (result == IdentityResult.Success)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {}
+    "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {}
   },
   "projects": {
-    "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {
+    "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
+        "projectUniqueName": "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
         "projectName": "identity",
-        "projectPath": "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
+        "projectPath": "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
         "packagesPath": "C:\\Users\\Matte\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\sandbox\\c-sharp\\identity\\obj\\",
+        "outputPath": "c:\\code\\sandbox\\c-sharp\\identity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,7 +43,11 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[10.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

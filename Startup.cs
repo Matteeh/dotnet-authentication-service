@@ -18,6 +18,7 @@ using System.Text;
 using AutoMapper;
 using identity.ViewModels;
 using identity.Services;
+using identity.Mapping;
 
 namespace identity
 {
@@ -66,22 +67,10 @@ namespace identity
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IUserRepository, UserRepository>();
-            CreateObjectMappings();
+            services.AddAutoMapper(typeof(ModelToVMProfile), typeof(VMToModelProfile));
 
         }
 
-        private void CreateObjectMappings()
-        {
-            Mapper.Initialize(config =>
-            {
-                config.CreateMap<ApplicationUser, UserSignUpVM>(MemberList.Destination);
-                config.CreateMap<UserSignUpVM, ApplicationUser>(MemberList.Source);
-                config.CreateMap<ApplicationUser, UserSignInVM>(MemberList.Destination);
-                config.CreateMap<UserSignInVM, ApplicationUser>(MemberList.Source);
-                config.CreateMap<ApplicationUser, UserVM>(MemberList.Destination);
-                config.CreateMap<UserVM, ApplicationUser>(MemberList.Source);
-            });
-        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
