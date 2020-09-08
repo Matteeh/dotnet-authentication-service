@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using identity.ViewModels;
 using identity.Services;
@@ -27,7 +28,6 @@ namespace identity
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Console.WriteLine(Environment.GetEnvironmentVariable("CONNECTION_STRING"));
         }
 
         public IConfiguration Configuration { get; }
@@ -36,7 +36,8 @@ namespace identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("CONNECTION_STRING")));
 
             services.AddIdentity<ApplicationUser, IdentityRole<int>>(options =>
             {
