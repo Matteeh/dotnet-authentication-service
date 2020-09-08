@@ -62,18 +62,27 @@ namespace identity.Controllers
         [HttpPost("sign-in")]
         public async Task<IActionResult> SignIn([FromBody] UserSignInVM user)
         {
-            var result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, false, false);
-            if (result == Microsoft.AspNetCore.Identity.SignInResult.Success)
+            try
             {
-                var appUser = _unitOfWork.Users.Find(u => u.Email == user.Email).FirstOrDefault();
-                // var appUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
-                var token = _tokenBuilder.BuildToken(appUser);
-                return Ok(token);
+                var result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, false, false);
+                if (result == Microsoft.AspNetCore.Identity.SignInResult.Success)
+                {
+                    var appUser = _unitOfWork.Users.Find(u => u.Email == user.Email).FirstOrDefault();
+                    // var appUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+                    var token = _tokenBuilder.BuildToken(appUser);
+                    return Ok(token);
+                }
+                else
+                {
+                    return Unauthorized();
+                }
+
             }
-            else
+            catch (Exception e)
             {
-                return Unauthorized();
+                return Ok(e.Message);
             }
+
         }
 
         [HttpGet("verify")]
