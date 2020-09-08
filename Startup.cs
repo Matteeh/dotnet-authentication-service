@@ -37,7 +37,7 @@ namespace identity
         {
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("CONNECTION_STRING")));
+                options.UseSqlServer("Server=tcp:mathiastestdb.database.windows.net,1433;Database=coreDB;User ID=mathiasR;Password=ykk8sCqK8j;Encrypt=true;Connection Timeout=30;"));
 
             services.AddIdentity<ApplicationUser, IdentityRole<int>>(options =>
             {

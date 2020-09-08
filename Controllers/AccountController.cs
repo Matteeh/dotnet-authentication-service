@@ -49,7 +49,7 @@ namespace identity.Controllers
             }
             else
             {
-                throw new Exception("Sign-up Failed");
+                return BadRequest("User already exists");
             }
         }
 
