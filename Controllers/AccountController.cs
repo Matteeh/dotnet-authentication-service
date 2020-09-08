@@ -35,6 +35,12 @@ namespace identity.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet("test")]
+        public IActionResult test()
+        {
+            return Ok("OK");
+        }
+
         [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp([FromBody] UserSignUpVM user)
         {
