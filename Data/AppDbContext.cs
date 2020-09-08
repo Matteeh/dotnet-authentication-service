@@ -14,7 +14,9 @@ namespace identity.Data
         // public override DbSet<ApplicationUser> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=Saas.Identity;Trusted_Connection=True;");
+            // "Server=tcp:mathiastestdb.database.windows.net,1433;Database=coreDB;User ID=<username>;Password=<password>;Encrypt=true;Connection Timeout=30;"
+            //  "Server=localhost;Database=Saas.Identity;Trusted_Connection=True;"
+            optionsBuilder.UseSqlServer("Server=tcp:mathiastestdb.database.windows.net,1433;Database=coreDB;User ID=mathiasR;Password=ykk8sCqK8j;Encrypt=true;Connection Timeout=30;");
 
         }
 

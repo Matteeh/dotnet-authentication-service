@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {}
+    "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {}
   },
   "projects": {
-    "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {
+    "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
+        "projectUniqueName": "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
         "projectName": "identity",
-        "projectPath": "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
+        "projectPath": "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
         "packagesPath": "C:\\Users\\Matte\\.nuget\\packages\\",
-        "outputPath": "c:\\code\\sandbox\\c-sharp\\identity\\obj\\",
+        "outputPath": "C:\\code\\sandbox\\c-sharp\\identity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

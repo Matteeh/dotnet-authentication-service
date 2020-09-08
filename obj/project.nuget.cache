@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YZu0XHpNItpPdQO0YTpxAIIJvuzbZBLcw9MAoVE2QatDlO7ooXoy5ZiET5IEatNtduNV6YdP8xc4vgVhbSbo9A==",
+  "dgSpecHash": "AgXyyneU2sfPg8qEJlPeGU5hAPG35ee7UxYQKX+iOCwXIZjl9vwe4l3GcLgHBv9RvXDOLJ5DaKzucZCCLwPcDQ==",
   "success": true,
-  "projectFilePath": "c:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
+  "projectFilePath": "C:\\code\\sandbox\\c-sharp\\identity\\identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matte\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Matte\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",

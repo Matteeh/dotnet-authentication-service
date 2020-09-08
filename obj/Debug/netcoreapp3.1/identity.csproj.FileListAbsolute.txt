@@ -68,3 +68,4 @@ C:\code\sandbox\c-sharp\identity\obj\Debug\netcoreapp3.1\staticwebassets\identit
 C:\code\sandbox\c-sharp\identity\obj\Debug\netcoreapp3.1\identity.dll
 C:\code\sandbox\c-sharp\identity\obj\Debug\netcoreapp3.1\identity.pdb
 C:\code\sandbox\c-sharp\identity\obj\Debug\netcoreapp3.1\identity.genruntimeconfig.cache
+C:\code\sandbox\c-sharp\identity\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
